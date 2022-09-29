@@ -78,14 +78,12 @@ table {
 
 /* ----- CHECK FOR USER DARK MODE PREFERENCE ----- */
 /* --------------- BEGIN USER PREFERS DARK COLOR SCHEME QUERY --------------- */
-@media (prefers-color-scheme: dark) {
-    .day.dark-scheme {background: #333; color: white;}
-    .night.dark-scheme { background: black; color:#ddd}
+@media screen (prefers-color-scheme: dark) {
+    dark-scheme {background: #222; color: #fff;}
 }
 
-@media (prefers-color-scheme: light) {
-    .day.light-scheme {background: white; color: #555}
-    .night.light-scheme {background: #eee; color: black}
+@media screen (prefers-color-scheme: light) {
+    light-scheme {background: #fff; color: black}
 }
 
 /* CHANGE THE BODY'S BACKGROUND COLOR TO THE DARK GRAY IF THE USER PREFERS DARK MODE */
@@ -147,12 +145,14 @@ footer .icon{
 
 /* ----- HANDLE PREFERS REDUCED MOTION FOR THE ICON ANIMATIONS ----- */
 /* --------------- BEGIN USER PREFERS REDUCED MOTION QUERY --------------- */
+@media (prefers-reduced-motion) {
     @-webkit-keyframes icon-animation {
         0% { font-variation-settings: "TIME" 1; }
     }
     @keyframes icon-animation {
         0% { font-variation-settings: "TIME" 1; }
     }
+}
 /* --------------- END USER PREFERS REDUCED MOTION QUERY --------------- */
 
 
