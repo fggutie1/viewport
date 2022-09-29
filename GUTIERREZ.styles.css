@@ -78,12 +78,16 @@ table {
 
 /* ----- CHECK FOR USER DARK MODE PREFERENCE ----- */
 /* --------------- BEGIN USER PREFERS DARK COLOR SCHEME QUERY --------------- */
-@media screen (prefers-color-scheme: dark) {
-    dark-scheme {background: #222; color: #fff;}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222; 
+        color: #fff;}
 }
 
-@media screen (prefers-color-scheme: light) {
-    light-scheme {background: #fff; color: black}
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff; 
+        color: black}
 }
 
 /* CHANGE THE BODY'S BACKGROUND COLOR TO THE DARK GRAY IF THE USER PREFERS DARK MODE */
